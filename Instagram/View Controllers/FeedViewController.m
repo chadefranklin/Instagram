@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 
 @property (nonatomic, strong) NSArray *posts;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation FeedViewController
@@ -27,6 +28,11 @@
     self.feedTableView.delegate = self;
     
     [self fetchFeed];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchFeed) forControlEvents:UIControlEventValueChanged];
+    //[self.moviesTableView addSubview:self.refreshControl];
+    [self.feedTableView insertSubview:self.refreshControl atIndex:0];
 }
 
 - (void)fetchFeed{
@@ -46,6 +52,8 @@
         else {
             // handle error
         }
+        
+        [self.refreshControl endRefreshing];
     }];
 }
 
