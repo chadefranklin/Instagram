@@ -27,6 +27,7 @@
     [self.imageView loadInBackground];
     
     self.captionLabel.text = post.caption;
+    self.usernameLabel.text = post.author.username;
 }
 
 @end
