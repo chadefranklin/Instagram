@@ -121,39 +121,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="501" id="2Ud-XN-GIS" customClass="PostCell">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="501"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="567" id="2Ud-XN-GIS" customClass="PostCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="567"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ud-XN-GIS" id="hHy-ql-o0L">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xm7-Ux-ncB" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                    <rect key="frame" x="0.0" y="70" width="414" height="414"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="xm7-Ux-ncB" secondAttribute="height" multiplier="1:1" id="GTG-Hl-oEh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-Iq-dcZ">
-                                                    <rect key="frame" x="10" y="424" width="394" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-Iq-dcZ">
+                                                    <rect key="frame" x="10" y="494" width="394" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kK7-h5-Qam" customClass="PFImageView">
+                                                    <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="kK7-h5-Qam" secondAttribute="height" multiplier="1:1" id="SA3-s6-SNm"/>
+                                                        <constraint firstAttribute="width" constant="50" id="XIb-oM-zhN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD7-Bv-AhX">
+                                                    <rect key="frame" x="73" y="20.5" width="313" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="iD7-Bv-AhX" firstAttribute="leading" secondItem="kK7-h5-Qam" secondAttribute="trailing" constant="8" id="1xs-8F-akS"/>
                                                 <constraint firstAttribute="trailing" secondItem="tF3-Iq-dcZ" secondAttribute="trailing" constant="10" id="FTH-ap-70S"/>
                                                 <constraint firstItem="tF3-Iq-dcZ" firstAttribute="leading" secondItem="hHy-ql-o0L" secondAttribute="leading" constant="10" id="NT7-uw-1Cf"/>
+                                                <constraint firstItem="iD7-Bv-AhX" firstAttribute="centerY" secondItem="kK7-h5-Qam" secondAttribute="centerY" id="R1L-yO-E7a"/>
                                                 <constraint firstAttribute="trailing" secondItem="xm7-Ux-ncB" secondAttribute="trailing" id="ULy-qS-XBf"/>
+                                                <constraint firstItem="kK7-h5-Qam" firstAttribute="top" secondItem="hHy-ql-o0L" secondAttribute="top" constant="10" id="Y0p-aI-08c"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tF3-Iq-dcZ" secondAttribute="bottom" constant="10" id="fvl-cg-IXl"/>
-                                                <constraint firstItem="xm7-Ux-ncB" firstAttribute="top" secondItem="hHy-ql-o0L" secondAttribute="top" id="jkp-kg-aPd"/>
                                                 <constraint firstItem="xm7-Ux-ncB" firstAttribute="leading" secondItem="hHy-ql-o0L" secondAttribute="leading" id="kLn-cn-S5P"/>
+                                                <constraint firstItem="xm7-Ux-ncB" firstAttribute="top" secondItem="kK7-h5-Qam" secondAttribute="bottom" constant="10" id="kVD-GH-Pvj"/>
+                                                <constraint firstItem="kK7-h5-Qam" firstAttribute="leading" secondItem="hHy-ql-o0L" secondAttribute="leading" constant="15" id="q0y-nW-hkR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iD7-Bv-AhX" secondAttribute="trailing" constant="8" id="qek-vJ-oRf"/>
                                                 <constraint firstItem="tF3-Iq-dcZ" firstAttribute="top" secondItem="xm7-Ux-ncB" secondAttribute="bottom" constant="10" id="t21-3r-nbV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="tF3-Iq-dcZ" id="Opi-Ot-fvI"/>
                                             <outlet property="imageView" destination="xm7-Ux-ncB" id="riY-nJ-9fT"/>
+                                            <outlet property="profileImageView" destination="kK7-h5-Qam" id="ne4-Z3-YFN"/>
+                                            <outlet property="usernameLabel" destination="iD7-Bv-AhX" id="39Z-s9-2Ze"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -299,5 +319,6 @@
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_sign" width="479" height="161"/>
+        <image name="profile-icon" width="26" height="26"/>
     </resources>
 </document>
