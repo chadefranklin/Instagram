@@ -11,6 +11,7 @@
 #import "PostCell.h"
 #import "Post.h"
 #import "ComposeViewController.h"
+#import "PostDetailsViewController.h"
 
 @interface FeedViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
@@ -182,10 +183,24 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    UINavigationController *composeNavigationController = [segue destinationViewController];
-    ComposeViewController *composeViewController = composeNavigationController.viewControllers.firstObject;
     
-    composeViewController.image = self.temporaryImage;
+    
+    
+    if ([segue.identifier isEqualToString:@"toComposeSegue"]) {
+        UINavigationController *composeNavigationController = [segue destinationViewController];
+        ComposeViewController *composeViewController = composeNavigationController.viewControllers.firstObject;
+        
+        composeViewController.image = self.temporaryImage;
+    } else if ([segue.identifier isEqualToString:@"toPostDetailsSegue"]) {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
+        Post *post = self.posts[indexPath.row];
+        
+        //TweetDetailsViewController *tweetDetailsViewController = [segue destinationViewController];
+        UINavigationController *navigationController = [segue destinationViewController];
+        PostDetailsViewController *postDetailsViewController = (PostDetailsViewController*)navigationController.topViewController;
+        postDetailsViewController.post = post;
+    }
 }
 
 
