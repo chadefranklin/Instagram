@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ComposeViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ComposeViewController : UIViewController
+@property (nonatomic, strong) UIImage *image;
 
 @end
 
