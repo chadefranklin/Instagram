@@ -23,6 +23,7 @@
 		B428650F24B5E10300F03109 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = B428650E24B5E10300F03109 /* Post.m */; };
 		B428651324B5E35500F03109 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B428651224B5E35500F03109 /* ComposeViewController.m */; };
 		B428651624B72B6D00F03109 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B428651524B72B6D00F03109 /* PostCell.m */; };
+		B428651924B9045B00F03109 /* PostDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B428651824B9045B00F03109 /* PostDetailsViewController.m */; };
 		F886B98A49137386B9C436A5 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FA76C2A6808A6EE4897FCC /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		B428651224B5E35500F03109 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		B428651424B72B6D00F03109 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		B428651524B72B6D00F03109 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		B428651724B9045B00F03109 /* PostDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostDetailsViewController.h; sourceTree = "<group>"; };
+		B428651824B9045B00F03109 /* PostDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostDetailsViewController.m; sourceTree = "<group>"; };
 		E226820EFDFE3EE31DF90D34 /* Pods-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.release.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +194,8 @@
 				B428650A24B5D2A000F03109 /* FeedViewController.m */,
 				B428651124B5E35500F03109 /* ComposeViewController.h */,
 				B428651224B5E35500F03109 /* ComposeViewController.m */,
+				B428651724B9045B00F03109 /* PostDetailsViewController.h */,
+				B428651824B9045B00F03109 /* PostDetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				B428650B24B5D2A000F03109 /* FeedViewController.m in Sources */,
 				B428651624B72B6D00F03109 /* PostCell.m in Sources */,
 				B428650824B5BFC700F03109 /* LoginViewController.m in Sources */,
+				B428651924B9045B00F03109 /* PostDetailsViewController.m in Sources */,
 				B428650F24B5E10300F03109 /* Post.m in Sources */,
 				B428651324B5E35500F03109 /* ComposeViewController.m in Sources */,
 			);
