@@ -240,7 +240,11 @@
                         <viewLayoutGuide key="safeArea" id="we8-LF-Ysz"/>
                     </view>
                     <navigationItem key="navigationItem" id="oXH-ME-x4k">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SjH-fu-ycZ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="SjH-fu-ycZ">
+                            <connections>
+                                <action selector="onCancelPressed:" destination="nGu-YE-bvg" id="sFR-48-5QQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Post" id="XMo-PW-KIr">
                             <connections>
                                 <action selector="onPostPressed:" destination="nGu-YE-bvg" id="d2B-04-Oo0"/>
@@ -249,7 +253,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="captionTextView" destination="51r-zq-tiB" id="ThP-Sf-utY"/>
-                        <outlet property="imageView" destination="qFU-Jm-h9z" id="sHA-KV-eW5"/>
+                        <outlet property="imageView" destination="qFU-Jm-h9z" id="kO7-mh-NUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNI-oJ-vQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
