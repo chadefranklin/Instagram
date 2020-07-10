@@ -95,6 +95,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [self.presentingViewController dismissViewControllerAnimated:true completion:nil];
+}
+
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
     UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     
@@ -121,6 +125,11 @@
         }
     }];
 }
+
+- (IBAction)onCancelPressed:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 
 
 /*
