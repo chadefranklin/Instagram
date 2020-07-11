@@ -43,7 +43,6 @@
     // construct PFQuery
     PFQuery *postQuery = [Post query];
     [postQuery orderByDescending:@"createdAt"];
-    //[postQuery includeKey:@"createdAt"];
     [postQuery includeKey:@"author"];
     postQuery.limit = 20;
 
@@ -196,9 +195,7 @@
         NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
         Post *post = self.posts[indexPath.row];
         
-        //TweetDetailsViewController *tweetDetailsViewController = [segue destinationViewController];
-        UINavigationController *navigationController = [segue destinationViewController];
-        PostDetailsViewController *postDetailsViewController = (PostDetailsViewController*)navigationController.topViewController;
+        PostDetailsViewController *postDetailsViewController = (PostDetailsViewController*)[segue destinationViewController];
         postDetailsViewController.post = post;
     }
 }
