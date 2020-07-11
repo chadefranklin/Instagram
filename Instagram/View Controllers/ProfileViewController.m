@@ -9,10 +9,11 @@
 #import "ProfileViewController.h"
 #import "PostCell.h"
 #import "Post.h"
+#import <Parse/Parse.h>
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *profileFeedTableView;
-
+@property (nonatomic, strong) NSArray *posts;
 @end
 
 @implementation ProfileViewController
@@ -24,7 +25,42 @@
     self.profileFeedTableView.dataSource = self;
     self.profileFeedTableView.delegate = self;
     
-    //[self fetchFeed];
+    [self fetchFeed];
+}
+
+- (void)fetchFeed{
+    // construct PFQuery
+    PFQuery *postQuery = [Post query];
+    [postQuery whereKey:@"author" equalTo:[PFUser currentUser]];
+    [postQuery orderByDescending:@"createdAt"];
+    [postQuery includeKey:@"author"];
+    postQuery.limit = 20;
+
+    // fetch data asynchronously
+    [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
+        if (posts) {
+            // do something with the data fetched
+            self.posts = posts;
+            [self.profileFeedTableView reloadData];
+        }
+        else {
+            // handle error
+        }
+    }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.posts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    
+    PFObject *post = self.posts[indexPath.row];
+    
+    [cell setPost:post];
+        
+    return cell;
 }
 
 /*
