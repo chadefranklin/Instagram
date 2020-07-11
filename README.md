@@ -2,7 +2,7 @@
 
 **Instagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **28** hours spent in total
+Time spent: **29** hours spent in total
 
 ## User Stories
 
@@ -49,6 +49,8 @@ Here's a walkthrough of implemented user stories:
 <img src='http://g.recordit.co/KX033Bzajf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src='http://g.recordit.co/9DZ4qDQLWx.gif' title='Comments Walkthrough' width='' alt='Comments Walkthrough' />
+
+<img src='http://g.recordit.co/wjnjf3v4pv.gif' title='Profile View Walkthrough' width='' alt='Profile View Walkthrough' />
 
 GIFs created with [RecordIt](https://recordit.co/).
 
