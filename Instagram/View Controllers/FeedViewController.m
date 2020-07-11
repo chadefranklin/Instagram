@@ -154,7 +154,7 @@
     
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:^{
-        [self performSegueWithIdentifier:@"composeSegue" sender:nil];
+        [self performSegueWithIdentifier:@"toComposeSegue" sender:nil];
     }];
 }
 
