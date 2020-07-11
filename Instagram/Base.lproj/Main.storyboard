@@ -347,11 +347,11 @@
             </objects>
             <point key="canvasLocation" x="2110" y="-238"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="j8d-Pa-bMR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dd8-fy-Qtz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="profile_tab" id="Kos-Dx-2XZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_tab" id="Kos-Dx-2XZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36p-PF-68k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
