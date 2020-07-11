@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ko1-IQ-hdN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="fbj-N2-Qv3"/>
+                    <navigationItem key="navigationItem" title="Profile" id="fbj-N2-Qv3">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="IQf-MT-hLR">
+                            <connections>
+                                <action selector="onLogOutPressed:" destination="pKZ-NP-qSw" id="FA5-tj-2wV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileFeedTableView" destination="akn-re-hOG" id="dtR-eQ-kkw"/>
                     </connections>
@@ -257,6 +263,11 @@
                         <viewLayoutGuide key="safeArea" id="nEb-g1-0aj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="PIL-iF-0Yv">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="xz2-Re-Bkh">
+                            <connections>
+                                <action selector="onLogOutPressed:" destination="uS8-BQ-RTJ" id="fLx-le-z4Q"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="bEQ-ey-CKC">
                             <connections>
                                 <action selector="onComposePressed:" destination="uS8-BQ-RTJ" id="tcr-se-umi"/>
