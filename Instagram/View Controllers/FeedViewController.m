@@ -89,8 +89,8 @@
 }
 
 - (void)composeImageAlert{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
-           message:@"Message"
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Post photo"
+           message:@"Please choose a photo location"
     preferredStyle:(UIAlertControllerStyleActionSheet)];
     
     
