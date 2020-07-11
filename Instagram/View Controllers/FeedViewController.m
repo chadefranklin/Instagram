@@ -88,6 +88,13 @@
     }
 }
 
+- (IBAction)onLogOutPressed:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
+
 - (void)composeImageAlert{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Post photo"
            message:@"Please choose a photo location"

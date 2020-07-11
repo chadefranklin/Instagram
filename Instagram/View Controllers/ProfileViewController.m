@@ -63,6 +63,13 @@
     return cell;
 }
 
+- (IBAction)onLogOutPressed:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
+
 /*
 #pragma mark - Navigation
 
