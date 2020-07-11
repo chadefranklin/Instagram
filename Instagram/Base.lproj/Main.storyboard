@@ -96,18 +96,85 @@
         <!--Profile-->
         <scene sceneID="Rk3-yc-Zfs">
             <objects>
-                <viewController id="pKZ-NP-qSw" sceneMemberID="viewController">
+                <viewController id="pKZ-NP-qSw" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cHF-vL-UnO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akn-re-hOG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="567" id="W9n-Z5-xV8" customClass="PostCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="567"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W9n-Z5-xV8" id="Bbl-XI-N40">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ajd-V3-NdF" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="70" width="414" height="414"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ajd-V3-NdF" secondAttribute="height" multiplier="1:1" id="eBd-dX-7X0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-uq-xqB">
+                                                    <rect key="frame" x="10" y="494" width="394" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-43-vMD" customClass="PFImageView">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="i2y-x5-fIl"/>
+                                                        <constraint firstAttribute="width" secondItem="Eab-43-vMD" secondAttribute="height" multiplier="1:1" id="mB0-FU-P0k"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljg-6o-BV9">
+                                                    <rect key="frame" x="68" y="20.5" width="318" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ljg-6o-BV9" firstAttribute="leading" secondItem="Eab-43-vMD" secondAttribute="trailing" constant="8" id="4AC-1Q-o0Q"/>
+                                                <constraint firstItem="ljg-6o-BV9" firstAttribute="centerY" secondItem="Eab-43-vMD" secondAttribute="centerY" id="MgR-fe-kdE"/>
+                                                <constraint firstItem="Eab-43-vMD" firstAttribute="leading" secondItem="Bbl-XI-N40" secondAttribute="leading" constant="10" id="Zff-ms-Tbd"/>
+                                                <constraint firstAttribute="trailing" secondItem="pc0-uq-xqB" secondAttribute="trailing" constant="10" id="d7d-7R-Z8p"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pc0-uq-xqB" secondAttribute="bottom" constant="10" id="dw2-6b-zsc"/>
+                                                <constraint firstItem="pc0-uq-xqB" firstAttribute="leading" secondItem="Bbl-XI-N40" secondAttribute="leading" constant="10" id="f5q-k4-quN"/>
+                                                <constraint firstAttribute="trailing" secondItem="ajd-V3-NdF" secondAttribute="trailing" id="hYf-lV-pMk"/>
+                                                <constraint firstItem="Eab-43-vMD" firstAttribute="top" secondItem="Bbl-XI-N40" secondAttribute="top" constant="10" id="hZu-QR-NmP"/>
+                                                <constraint firstItem="pc0-uq-xqB" firstAttribute="top" secondItem="ajd-V3-NdF" secondAttribute="bottom" constant="10" id="jdD-jK-Qns"/>
+                                                <constraint firstItem="ajd-V3-NdF" firstAttribute="leading" secondItem="Bbl-XI-N40" secondAttribute="leading" id="nGj-c9-Qa2"/>
+                                                <constraint firstItem="ajd-V3-NdF" firstAttribute="top" secondItem="Eab-43-vMD" secondAttribute="bottom" constant="10" id="qdg-PM-M4A"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ljg-6o-BV9" secondAttribute="trailing" constant="8" id="twE-3C-LXf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="pc0-uq-xqB" id="Xrm-CH-64u"/>
+                                            <outlet property="imageView" destination="ajd-V3-NdF" id="bY2-2y-Ea1"/>
+                                            <outlet property="profileImageView" destination="Eab-43-vMD" id="3cS-Vu-dgw"/>
+                                            <outlet property="usernameLabel" destination="ljg-6o-BV9" id="EA8-ch-ERB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ko1-IQ-hdN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="fbj-N2-Qv3"/>
+                    <connections>
+                        <outlet property="profileFeedTableView" destination="akn-re-hOG" id="dtR-eQ-kkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRt-DA-3vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3158" y="488"/>
+            <point key="canvasLocation" x="3157.971014492754" y="487.5"/>
         </scene>
         <!--Feed-->
         <scene sceneID="4OW-i2-zNJ">
@@ -284,7 +351,7 @@
         <scene sceneID="j8d-Pa-bMR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dd8-fy-Qtz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Kos-Dx-2XZ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="profile_tab" id="Kos-Dx-2XZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36p-PF-68k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -512,5 +579,6 @@
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_sign" width="479" height="161"/>
         <image name="profile-icon" width="26" height="26"/>
+        <image name="profile_tab" width="25" height="25"/>
     </resources>
 </document>
