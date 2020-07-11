@@ -29,6 +29,7 @@
     self.detailsTableView.delegate = self;
     
     PFQuery *postQuery = [Comment query];
+    [postQuery whereKey:@"post" equalTo:self.post];
     [postQuery orderByDescending:@"createdAt"];
     //[postQuery includeKey:@"createdAt"]; // don't think this is necessary
     [postQuery includeKey:@"author"];
